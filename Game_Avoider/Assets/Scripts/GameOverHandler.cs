@@ -52,7 +52,9 @@ public class GameOverHandler : MonoBehaviour
    
    public void ContinueGame()
    {
-     scoreSystem.continueTimer();
+      scoreSystem.enabled = true;
+      
+      scoreSystem.continueTimer();
       
       player.SetActive(true);
       player.transform.position = Vector3.zero;
