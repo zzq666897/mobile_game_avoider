@@ -10,12 +10,19 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField] private TMP_Text tMP_Text;
     [SerializeField] private float ScoreMultiplier;
 
+    public bool startTimer = true;
+
     private float score;
 
 
     // Update is called once per frame
     void Update()
     {
+       if(!startTimer)
+       {
+           return;
+       }
+       
        score += ScoreMultiplier * Time.deltaTime;
 
        tMP_Text.text = Mathf.FloorToInt(score).ToString();
@@ -23,12 +30,19 @@ public class ScoreSystem : MonoBehaviour
 
     public int FinalScore()
     {
-        ScoreMultiplier = 0;
+        //ScoreMultiplier = 0;
+
+        startTimer = false;
 
         tMP_Text.text = string.Empty;
 
         int finalscore = Mathf.FloorToInt(score);
 
        return finalscore;
+    }
+
+    public void continueTimer()
+    {
+        startTimer = true;
     }
 }

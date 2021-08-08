@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tMP_Text: {fileID: 1863157866}
   ScoreMultiplier: 5
+  startTimer: 1
 --- !u!4 &160101898
 Transform:
   m_ObjectHideFlags: 0
@@ -959,6 +960,8 @@ MonoBehaviour:
   scoreSystem: {fileID: 160101897}
   GameOverDisplay: {fileID: 525331118}
   asteroid_Manager: {fileID: 1832505302}
+  player: {fileID: 1420515973}
+  continueButton: {fileID: 2008893279}
 --- !u!4 &1035140726
 Transform:
   m_ObjectHideFlags: 0
@@ -6745,7 +6748,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1035140725}
         m_TargetAssemblyTypeName: GameOverHandler, Assembly-CSharp
-        m_MethodName: ContinueGame
+        m_MethodName: ContinueButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
